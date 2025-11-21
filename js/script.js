@@ -9,10 +9,23 @@ if(userName === ''){
 document.getElementById("haloText").innerText = "Halo " + userName + ", " + "Selamat Datang di Website Terans Swasembada" + "!";
 }
 
-function submitForm(){
-    // Mengambil nilai dari form
-    let nama = document.getElementById("nama").value;
-    let tanggalLahir = document.getElementById("tanggalLahir").value;
-    let genderElements = document.getElementsByName("gender");
-    let pesan = document.getElementById("pesan").value;
-}                          
+document.getElementById("btnSubmit").addEventListener("click", function(){
+
+    const name = document.getElementById("name").value;
+    const date = document.getElementById("date").value;
+    const gender = document.querySelector("input[name='gender']:checked")?.value || "Belum dipilih";
+    const pesan = document.getElementById("Pesan").value;
+
+    const output = `
+        <h3>Hasil Pesan Kamu</h3>
+        <p><strong>Nama:</strong> ${name}</p>
+        <p><strong>Tanggal Lahir:</strong> ${date}</p>
+        <p><strong>Jenis Kelamin:</strong> ${gender}</p>
+        <p><strong>Pesan:</strong> ${pesan}</p>
+    `;
+
+    const box = document.getElementById("outputMessage");
+    box.innerHTML = output;
+    box.style.display = "block";
+});
+

@@ -20,29 +20,25 @@
         <img class="logo" src="images/lovepik.png" width="100px" alt="Logo">
     </div>
     <ul class="nav-menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Our Profile</a></li>
-        <li><a href="#">Portofolio</a></li>
-        <li><a href="#">Message Us</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#profile">Our Profile</a></li>
+        <li><a href="#portofolio">Portofolio</a></li>
+        <li><a href="#messageUs">Message Us</a></li>
     </ul>
 </nav>
 
 <!--Main Content-->
 <main>
     <!--HomePage-->
-    <div class="header">
+    <section id="home">
         <h1 id="haloText"></h1>
         <p>Melayani dengan hati dan penuh senyuman</p>
-    </div>
-        
-    <div class="container">
-        <img class="background" src="images/background.png" alt="background" width="200px">
-    </div>
+    </section>
 <hr />
     <!--OurProfile-->    
-    <div class="hq-section">
+    <section id="profile">
         <h2>Our Headquarter</h2>
-    </div>
+    </section>
 
     <div class="hq-container">
         <div class="hq-item"></div>
@@ -60,9 +56,9 @@
     </div>
 <hr />
     <!--Portofolio-->
-    <div class="hq-section">
+    <section id="portofolio">
         <h2>Portofolio</h2>
-    </div>
+    </section>
 
     <div class="portfolio-container">
         <div class="portfolio-item"></div>
@@ -81,65 +77,57 @@
 
 <hr />
     <!--Message Us-->
-    <div class="hq-section">
-        <h2>Message Us</h2>
-        <table>
-            <tr>
-                <td>Nama</td>
-                <td>:</td>
-                <td>
-                    <input type="text" id="name" name="name"
-                    placeholder="Nama">
-                </td>
-            </tr>
+    <section id="messageUs">
+    <h2>Message Us</h2>
 
-            <tr>
-                <td>Tanggal Lahir</td>
-                <td>:</td>
-                <td>
-                    <input type="date" id="date" name="date">
-                </td>
-            </tr>
+    <div class="message-wrapper">
+        <div class="form-container">
+            <table>
+                <tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td><input type="text" id="name" placeholder="Nama"></td>
+                </tr>
 
-            <tr>
-                <td>Jenis Kelamin</td>
-                <td>:</td>
-                <td>
-                    <input type="radio" id="Laki-laki" name="gender" value="Laki-laki">
-                    <label for="Laki-laki">Laki-laki</label>
-                    <input type="radio" id="Perempuan" name="gender" value="Perempuan">
-                    <label for="Perempuan">Perempuan</label>
-                </td>
-            </tr>
+                <tr>
+                    <td>Tanggal Lahir</td>
+                    <td>:</td>
+                    <td><input type="date" id="date"></td>
+                </tr>
 
-            <tr>
-                <td>Pesan</td>
-                <td>:</td>
-                <td>
-                    <textarea id="Pesan" name="Pesan" rows="5" cols="30"
-                    placeholder="Pesan"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td>
-                    <input type="submit" value="Submit">
-                </td>
-        </table>
-    </main>  
-    
-    <div class="info-container">
-                <p>Current time: <span id="currentTime"></span></p>
-                <p>Nama: <span id="infoNama"></span></p>
-                <p>Tanggal Lahir: <span id="infoTanggalLahir"></span></p>
-                <p>Jenis Kelamin: <span id="infoGender"></span></p>
-                <p>Pesan: <span id="infoPesan"></span></p>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>:</td>
+                    <td>
+                        <input type="radio" name="gender" value="Laki-laki" id="Laki">
+                        <label for="Laki">Laki-laki</label>
+
+                        <input type="radio" name="gender" value="Perempuan" id="Perempuan">
+                        <label for="Perempuan">Perempuan</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Pesan</td>
+                    <td>:</td>
+                    <td><textarea id="Pesan" rows="5" cols="30"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" id="btnSubmit" value="Submit"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="outputMessage" class="output-container">
+        </div>
     </div>
+</section>
+  
 <hr />
     <!--Footer-->    
     <foooter>
-        <p>Created by Terans</p>
+        <p>&copy; 2025 Terans Swasembada. All Right Reserved</p>
     </foooter>
 
 <script src="js/script.js"></script>
